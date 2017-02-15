@@ -16,4 +16,4 @@ deployment:
     commands:
       - mvn package
       - scp target/spring-boot-sample-*.jar centos@52.76.31.173:/home/centos
-      - sh centos@52.76.31.173 'cd /home/centos && java -Dserver.port=8091 -jar spring-boot-sample-1.0-SNAPSHOT.jar &'
+      - sh centos@52.76.31.173 'java -Dserver.port=8091 -jar /home/centos/spring-boot-sample-1.0-SNAPSHOT.jar &'
